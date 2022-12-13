@@ -1,0 +1,6 @@
+PUT http://localhost:1000/api/users/no-been-not-from-did-see-which-which-can-word-water-out
+Content-Type: application/json
+
+{
+    "name":"selos de tu boca"
+}

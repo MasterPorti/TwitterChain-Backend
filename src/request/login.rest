@@ -1,0 +1,6 @@
+GET http://localhost:1000/api/users/
+Content-Type: application/json
+
+{
+	"seed": "so-which-be-was-his-find-no-not-more-how-so-go"
+}
