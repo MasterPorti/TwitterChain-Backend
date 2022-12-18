@@ -157,33 +157,29 @@ router.post("/users", (req, res) => {
     "-" +
     seedPhrase.seed11;
 
-  const user = userSchema({seed: seedArray});
+  const user = userSchema({ seed: seedArray });
   user
     .save()
-    .then(() => res.json({data: seedPhrase,arrayData:seedArray}))
-    .catch(error => res.json({ message: error }))
-    
- 
+    .then(() => res.json({ data: seedPhrase, arrayData: seedArray }))
+    .catch(error => res.json({ message: error }));
 });
-
 
 //Set name to account 🐊
 router.put("/users/:seed", (req, res) => {
   const seed = req.params.seed;
-  const name = req.body.name
+  const name = req.body.name;
   userSchema
-    .updateOne({ seed: seed }, { $set: { name: name }  })
+    .updateOne({ seed: seed }, { $set: { name: name } })
     .then(data => res.json(data))
     .catch(error => res.json({ message: error }));
 });
 
 //login 🫥
-router.get("/users", (req,res)=>{
-  const seed = req.body.seed
-  userSchema
-  .find({seed : seed})
-  .then(data=> res.json(data))
-  .catch(error=> res.json(error))
-})
+router.post("/login", async (req, res) => {
+  const seed = req.body.seed;
+  const data = await userSchema.find({ seed: seed });
+
+  res.json({ found: data.length == 0 ? false : true, data });
+});
 
 module.exports = router;

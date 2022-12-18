@@ -1,6 +1,6 @@
-PUT http://localhost:1000/api/users/no-been-not-from-did-see-which-which-can-word-water-out
+PUT http://localhost:1000/api/users/about-more-each-her-you-an-at-said-make-two-into-a
 Content-Type: application/json
 
 {
-    "name":"selos de tu boca"
+    "name":"LOL"
 }

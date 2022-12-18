@@ -1,6 +1,6 @@
-GET http://localhost:1000/api/users/
+POST http://localhost:1000/api/login
 Content-Type: application/json
 
 {
-	"seed": "so-which-be-was-his-find-no-not-more-how-so-go"
+	"seed": "him-we-about-with-been-for-has-how-people-get-many-some"
 }
